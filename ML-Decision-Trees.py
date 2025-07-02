@@ -7,6 +7,7 @@ import sklearn.tree as tree
 
 
 
+
 '''
 About the dataset
 Imagine that you are a medical researcher compiling data for a study. 
