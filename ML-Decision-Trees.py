@@ -1,7 +1,11 @@
+# Decision Trees
+
 import numpy as np 
 import pandas as pd
 from sklearn.tree import DecisionTreeClassifier
 import sklearn.tree as tree
+
+
 
 
 '''
@@ -22,10 +26,6 @@ url = 'https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDev
 
 my_data = pd.read_csv(url, delimiter=",")
 my_data[0:5]
-
-
-# Practice
-# What is the size of data?
 
 
 print(my_data.shape)
@@ -62,7 +62,6 @@ le_Chol.fit([ 'NORMAL', 'HIGH'])
 X[:,3] = le_Chol.transform(X[:,3]) 
 
 X[0:5]
-
 
 # Now we can fill the target variable.
 
@@ -116,7 +115,6 @@ predTree = drugTree.predict(X_testset)
 print (predTree [0:5])
 print (y_testset [0:5])
 
-
 # Evaluation
 # Next, let's import metrics from sklearn and check the accuracy of our model.
 
@@ -131,6 +129,7 @@ print("DecisionTrees's Accuracy: ", metrics.accuracy_score(y_testset, predTree))
 
 # Visualization
 # Let's visualize the tree
+
 
 
 tree.plot_tree(drugTree)
